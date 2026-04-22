@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:14:23 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/09 18:48:18 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/04/22 15:45:03 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,15 @@ s1 and s2.
 If n is zero, the return value is zero.
 */
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const char	*sp1;
 	const char	*sp2;
-	
+
 	sp1 = s1;
 	sp2 = s2;
-	
 	while (n > 0)
 	{
 		if (*sp1 != *sp2)

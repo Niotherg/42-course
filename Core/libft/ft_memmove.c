@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:13:10 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/09 17:28:50 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/04/22 15:45:16 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ overlap src or dest, and the bytes are then copied from the temporary
 array to dest.
 */
 
-#include <string.h>
+#include "libft.h"
 
 char	fwd_cpy(char *d, const char *s, size_t n)
 {

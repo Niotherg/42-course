@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:14:21 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/09 18:41:07 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/04/22 15:44:55 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ Return a pointer to the matching byte or NULL if the character does not
 occur in  the  givenmemory area.
 */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const char *src;
+	const char	*src;
 
 	src = s;
 	while (n > 0)

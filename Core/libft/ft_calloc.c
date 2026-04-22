@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:14:18 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/09 19:09:29 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/04/22 15:44:35 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,20 @@ would result in integer overflow, then  calloc() returns an error.
 Returns a pointer to the allocated memory.
 */
 
-#include <stdlib.h>
+#include "libft.h"
 
-void *calloc(size_t nmemb, size_t size)
+void	*calloc(size_t nmemb, size_t size)
 {
-	size_t	*res;
-	size_t i;
-	size_t s;
+	char	*res;
+	size_t	i;
 
 	res = malloc(nmemb * size);
-	if (res)
+	if (!res)
+		return (NULL);
+	while (i < nmemb * size)
 	{
-		
+		res[i] = 0;
+		i++;
 	}
+	return (res);
 }

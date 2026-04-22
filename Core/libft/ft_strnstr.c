@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:14:40 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/09 18:58:24 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/04/22 15:46:02 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ big, where not more than len characters are searched.  Characters that appear
 after a ‘\0’ character are not searched.
 */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

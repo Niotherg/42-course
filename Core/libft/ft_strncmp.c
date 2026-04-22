@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:14:38 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/09 18:26:27 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/04/22 15:18:50 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Returns an integer indicating the result of the comparison, as follows:
 It compares only the first (at most) n bytes of s1 and s2.
 */
 
-int ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
 
