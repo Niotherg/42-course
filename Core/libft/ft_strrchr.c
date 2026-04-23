@@ -1,28 +1,17 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/09 17:14:43 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/22 15:46:12 by magulyas         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-// Returns a pointer to the last occurrence of the character c in the string s.
-
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*pos;
+	const char	*last;
 
-	pos = NULL;
+	last = NULL;
 	while (*s)
 	{
-		if (*s == c)
-			pos = s;
+		if (*s == (char)c)
+			last = s;
+		s++;
 	}
-	return (pos);
+	if ((char)c == '\0')
+		return ((char *)s);
+	return ((char *)last);
 }

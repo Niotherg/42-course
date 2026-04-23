@@ -6,23 +6,13 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:13:26 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/09 17:13:27 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/04/23 01:31:24 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Checks if str contains only alphabetical characters
+#include "libft.h"
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (!((str[i] >= 'a' && str[i] <= 'z')
-				|| (str[i] >= 'A' && str[i] <= 'Z')))
-			return (0);
-		i++;
-	}
-	return (1);
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

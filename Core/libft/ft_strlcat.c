@@ -1,38 +1,31 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/09 17:14:32 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/09 17:50:56 by magulyas         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "libft.h"
 
-// Appends the NUL-terminated string src to the end of dst.  It will append at
-// most size - strlen(dst) - 1 bytes, NUL-terminating the result.
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+static size_t	dst_len(const char *dst, size_t size)
 {
-	unsigned int	dest_len;
-	unsigned int	src_len;
-	unsigned int	i;
+	size_t	i;
 
-	dest_len = 0;
-	src_len = 0;
 	i = 0;
-	while (dest[dest_len] != '\0')
-		dest_len++;
-	while (src[src_len] != '\0')
-		src_len++;
-	if (size <= dest_len)
-		return (size + src_len);
-	while (src[i] && (dest_len + i) < (size - 1))
+	while (i < size && dst[i])
+		i++;
+	return (i);
+}
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	dlen;
+	size_t	slen;
+	size_t	i;
+
+	dlen = dst_len(dst, size);
+	slen = ft_strlen(src);
+	if (dlen == size)
+		return (size + slen);
+	i = 0;
+	while (src[i] && dlen + i + 1 < size)
 	{
-		dest[dest_len + i] = src[i];
+		dst[dlen + i] = src[i];
 		i++;
 	}
-	dest[dest_len + i] = '\0';
-	return (dest_len + src_len);
+	dst[dlen + i] = '\0';
+	return (dlen + slen);
 }

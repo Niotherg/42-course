@@ -1,35 +1,20 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/09 17:14:35 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/09 17:41:45 by magulyas         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "libft.h"
 
-// copies up to size - 1 characters from the NUL-terminated string src to dst,
-// NUL-terminating the result.
-
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	src_len;
+	size_t	i;
+	size_t	src_len;
 
-	src_len = 0;
-	while (src[src_len] != '\0')
-		src_len++;
+	src_len = ft_strlen(src);
 	if (size > 0)
 	{
 		i = 0;
-		while (src[i] != '\0' && i < size - 1)
+		while (src[i] && i < size - 1)
 		{
-			dest[i] = src[i];
+			dst[i] = src[i];
 			i++;
 		}
-		dest[i] = '\0';
+		dst[i] = '\0';
 	}
 	return (src_len);
 }

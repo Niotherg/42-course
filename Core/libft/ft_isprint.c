@@ -1,27 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/09 17:13:37 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/09 17:29:14 by magulyas         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "libft.h"
 
-// Checks if str contains only printable characters
-
-int	ft_isprint(char *str)
+int	ft_isprint(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] >= 32 && str[i] <= 126))
-			return (0);
-		i++;
-	}
-	return (1);
+	return (c >= 32 && c <= 126);
 }

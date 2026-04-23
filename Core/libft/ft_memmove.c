@@ -1,68 +1,25 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/09 17:13:10 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/22 15:45:16 by magulyas         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/*
-Copies n bytes from memory area src to memory area dest.
-The memory areas may overlap: copying takes place as though the
-bytes in src are first copied into a temporary array that does not
-overlap src or dest, and the bytes are then copied from the temporary
-array to dest.
-*/
-
 #include "libft.h"
-
-char	fwd_cpy(char *d, const char *s, size_t n)
-{
-	size_t	i;
-
-	i = n;
-	while (i < n)
-	{
-		d[i] = s[i];
-		i++;
-	}
-	return (d);
-}
-
-char	bwd_cpy(char *d, const char *s, size_t n)
-{
-	size_t	i;
-
-	i = n;
-	while (i > 0)
-	{
-		d[i - 1] = s[i - 1];
-		i--;
-	}
-	return (d);
-}
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		*d;
-	const char	*s;
-	size_t		i;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	d = dest;
-	s = src;
+	if (!dest && !src)
+		return (NULL);
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
 	if (d == s || n == 0)
 		return (dest);
 	if (d < s)
 	{
-		d = fwd_cpy(d, s, n);
+		while (n--)
+			*d++ = *s++;
 	}
 	else
 	{
-		d = bwd_cpy(d, s, n);
+		while (n--)
+			d[n] = s[n];
 	}
 	return (dest);
 }

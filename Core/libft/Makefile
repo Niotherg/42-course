@@ -1,7 +1,7 @@
 NAME = libft.a
 
 CC = cc
-CFLAG = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 # ar program creates, modifies, and extracts from archives
 # r -> replace files in the archive or add them if they don't exist
 # c -> create the archive if doesn't exist
@@ -30,7 +30,8 @@ $(NAME): $(OBJ)
 # $@ = target, the .o file
 # This rule will only compile the .c files that have been modified since the
 # last compilation, so it won't compile unnecessarily.
-srcs/%.o: srcs/%.c $(HEADER)
+
+%.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # removes the .o files
