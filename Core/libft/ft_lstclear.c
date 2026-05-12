@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 20:26:45 by magulyas          #+#    #+#             */
-/*   Updated: 2026/05/12 18:46:42 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/12 19:45:42 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*next;
 
-	if (!lst || !del)
+	if (!lst || !del || !*lst)
 		return ;
 	while (*lst)
 	{
@@ -30,4 +30,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		ft_lstdelone(*lst, del);
 		*lst = next;
 	}
+	*lst = NULL;
 }

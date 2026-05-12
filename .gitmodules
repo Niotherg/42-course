@@ -1,0 +1,6 @@
+[submodule "Core/libft/Core/libft/libftTester"]
+	path = Core/libft/Core/libft/libftTester
+	url = https://github.com/Tripouille/libftTester
+[submodule "Core/libft/libftTester"]
+	path = Core/libft/libftTester
+	url = https://github.com/Tripouille/libftTester
