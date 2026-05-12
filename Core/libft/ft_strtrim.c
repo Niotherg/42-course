@@ -1,13 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/22 16:31:28 by magulyas          #+#    #+#             */
+/*   Updated: 2026/04/23 19:59:06 by magulyas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+Allocates memory (using malloc(3)) and returns a
+copy of ’s1’ with characters from ’set’ removed
+from the beginning and the end.
+*/
+
 #include "libft.h"
 
 static int	in_set(char const *set, char c)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (set[i])
 	{
-		if (set[i] == c)
+		if (c == set[i])
 			return (1);
 		i++;
 	}

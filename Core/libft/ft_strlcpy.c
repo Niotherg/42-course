@@ -1,6 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/09 17:14:35 by magulyas          #+#    #+#             */
+/*   Updated: 2026/04/23 19:40:33 by magulyas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+// copies up to size - 1 characters from the NUL-terminated string src to dst,
+// NUL-terminating the result.
+
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	src_len;
@@ -11,10 +26,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i = 0;
 		while (src[i] && i < size - 1)
 		{
-			dst[i] = src[i];
+			dest[i] = src[i];
 			i++;
 		}
-		dst[i] = '\0';
+		dest[i] = '\0';
 	}
 	return (src_len);
 }

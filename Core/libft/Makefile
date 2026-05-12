@@ -30,7 +30,6 @@ $(NAME): $(OBJ)
 # $@ = target, the .o file
 # This rule will only compile the .c files that have been modified since the
 # last compilation, so it won't compile unnecessarily.
-
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 

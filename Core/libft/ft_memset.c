@@ -1,16 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/09 17:13:42 by magulyas          #+#    #+#             */
+/*   Updated: 2026/04/23 19:47:10 by magulyas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+Fills the first n bytes of the memory area pointed to by s
+with the constant byte c.
+*/
+
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*ptr;
-	size_t			i;
+	size_t	i;
+	char	*str;
 
-	ptr = (unsigned char *)s;
 	i = 0;
+	str = s;
 	while (i < n)
 	{
-		ptr[i] = (unsigned char)c;
+		str[i] = c;
 		i++;
 	}
-	return (s);
+	return (str);
 }

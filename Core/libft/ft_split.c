@@ -1,3 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/22 18:23:31 by magulyas          #+#    #+#             */
+/*   Updated: 2026/04/24 19:15:02 by magulyas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+Allocates memory (using malloc(3)) and returns an
+array of strings obtained by splitting ’s’ using
+the character ’c’ as a delimiter.
+Each string in the returned array is allocated
+independently.
+The array of pointers itself is also allocated
+dynamically.
+The returned array must be NULL terminated.
+*/
+
 #include "libft.h"
 
 static size_t	count_words(char const *s, char c)
@@ -34,26 +57,21 @@ static char	*word_dup(char const *s, size_t start, size_t end)
 	return (word);
 }
 
-static void	free_words(char **tab, size_t count)
-{
-	while (count > 0)
-		free(tab[--count]);
-	free(tab);
-}
-
 static int	add_word(char **tab, char const *s, size_t *j, size_t pos[2])
 {
 	tab[*j] = word_dup(s, pos[0], pos[1]);
 	if (!tab[*j])
 	{
-		free_words(tab, *j);
+		while (*j > 0)
+			free(tab[--*j]);
+		free(tab);
 		return (0);
 	}
 	(*j)++;
 	return (1);
 }
 
-static int	fill_words(char **tab, char const *s, char c)
+static char	fill_words(char **tab, char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
