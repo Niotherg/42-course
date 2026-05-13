@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:14:23 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/24 18:20:43 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,3 +42,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+/*
+int	main(void)
+{
+	ft_putnbr_fd(ft_memcmp("abc", "abd", 3), 1);
+	ft_putchar_fd('\n', 1);
+	return (0);
+}
+*/

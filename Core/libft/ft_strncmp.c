@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:14:38 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/24 17:59:40 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,12 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
+
+/*
+int	main(void)
+{
+	ft_putnbr_fd(ft_strncmp("abc", "abd", 3), 1);
+	ft_putchar_fd('\n', 1);
+	return (0);
+}
+*/

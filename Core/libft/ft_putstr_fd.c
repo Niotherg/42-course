@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 19:21:05 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/24 20:15:14 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,12 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 	write(fd, s, ft_strlen(s));
 }
+
+/*
+int	main(void)
+{
+	ft_putstr_fd("libft", 1);
+	ft_putchar_fd('\n', 1);
+	return (0);
+}
+*/

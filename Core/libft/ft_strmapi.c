@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 19:11:02 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/23 19:49:36 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,24 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+
+/*
+static char	shift_char(unsigned int index, char c)
+{
+	return (c + index);
+}
+
+int	main(void)
+{
+	char	*result;
+
+	result = ft_strmapi("abc", shift_char);
+	if (result)
+	{
+		ft_putstr_fd(result, 1);
+		ft_putchar_fd('\n', 1);
+		free(result);
+	}
+	return (0);
+}
+*/

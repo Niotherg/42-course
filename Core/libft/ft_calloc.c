@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:14:18 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/24 18:53:52 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,3 +45,19 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(res, total);
 	return (res);
 }
+
+/*
+int	main(void)
+{
+	int	*numbers;
+
+	numbers = ft_calloc(3, sizeof(int));
+	if (numbers)
+	{
+		ft_putnbr_fd(numbers[0], 1);
+		ft_putchar_fd('\n', 1);
+		free(numbers);
+	}
+	return (0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 16:06:05 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/24 17:54:38 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	res[j] = '\0';
 	return (res);
 }
+
+/*
+int	main(void)
+{
+	char	*joined;
+
+	joined = ft_strjoin("lib", "ft");
+	if (joined)
+	{
+		ft_putstr_fd(joined, 1);
+		ft_putchar_fd('\n', 1);
+		free(joined);
+	}
+	return (0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 19:15:18 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/23 19:19:22 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,22 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
+
+/*
+static void	to_upper(unsigned int index, char *c)
+{
+	(void)index;
+	if (*c >= 'a' && *c <= 'z')
+		*c -= 32;
+}
+
+int	main(void)
+{
+	char	text[] = "libft";
+
+	ft_striteri(text, to_upper);
+	ft_putstr_fd(text, 1);
+	ft_putchar_fd('\n', 1);
+	return (0);
+}
+*/

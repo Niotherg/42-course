@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:14:21 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/24 17:45:27 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,18 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+/*
+int	main(void)
+{
+	char	*result;
+
+	result = ft_memchr("libft", 'f', 5);
+	if (result)
+		ft_putstr_fd(result, 1);
+	else
+		ft_putstr_fd("NULL", 1);
+	ft_putchar_fd('\n', 1);
+	return (0);
+}
+*/

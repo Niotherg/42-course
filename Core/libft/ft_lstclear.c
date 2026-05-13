@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 20:26:45 by magulyas          #+#    #+#             */
-/*   Updated: 2026/05/12 19:45:42 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,17 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 	*lst = NULL;
 }
+
+/*
+int	main(void)
+{
+	t_list	*head;
+
+	head = ft_lstnew(ft_strdup("one"));
+	ft_lstadd_back(&head, ft_lstnew(ft_strdup("two")));
+	ft_lstclear(&head, free);
+	ft_putstr_fd(head == NULL ? "cleared" : "not cleared", 1);
+	ft_putchar_fd('\n', 1);
+	return (0);
+}
+*/

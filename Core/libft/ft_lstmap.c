@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 20:34:35 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/23 21:04:06 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,3 +41,44 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
+
+/*
+static void	*add_one(void *content)
+{
+	int	*copy;
+
+	copy = malloc(sizeof(int));
+	if (!copy)
+		return (NULL);
+	*copy = *(int *)content + 1;
+	return (copy);
+}
+
+static void	print_int(void *content)
+{
+	ft_putnbr_fd(*(int *)content, 1);
+	ft_putchar_fd('\n', 1);
+}
+
+int	main(void)
+{
+	t_list	*head;
+	t_list	*mapped;
+	int		*first;
+	int		*second;
+
+	first = malloc(sizeof(int));
+	second = malloc(sizeof(int));
+	if (!first || !second)
+		return (1);
+	*first = 1;
+	*second = 2;
+	head = ft_lstnew(first);
+	ft_lstadd_back(&head, ft_lstnew(second));
+	mapped = ft_lstmap(head, add_one, free);
+	ft_lstiter(mapped, print_int);
+	ft_lstclear(&head, free);
+	ft_lstclear(&mapped, free);
+	return (0);
+}
+*/

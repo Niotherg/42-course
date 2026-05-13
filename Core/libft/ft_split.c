@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 18:23:31 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/24 19:15:02 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,3 +107,23 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (tab);
 }
+
+/*
+int	main(void)
+{
+	char	**parts;
+	int		i;
+
+	parts = ft_split("one,two,three", ',');
+	i = 0;
+	while (parts && parts[i])
+	{
+		ft_putstr_fd(parts[i], 1);
+		ft_putchar_fd('\n', 1);
+		free(parts[i]);
+		i++;
+	}
+	free(parts);
+	return (0);
+}
+*/

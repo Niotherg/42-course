@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:14:32 by magulyas          #+#    #+#             */
-/*   Updated: 2026/05/12 17:35:16 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,18 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dlen + i] = '\0';
 	return (dlen + slen);
 }
+
+/*
+int	main(void)
+{
+	char	buffer[12] = "abc";
+	size_t	length;
+
+	length = ft_strlcat(buffer, "def", sizeof(buffer));
+	ft_putstr_fd(buffer, 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd((int)length, 1);
+	ft_putchar_fd('\n', 1);
+	return (0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/09 17:13:40 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/23 19:46:56 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,15 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+/*
+int	main(void)
+{
+	char	dest[8];
+
+	ft_memcpy(dest, "abc", 4);
+	ft_putstr_fd(dest, 1);
+	ft_putchar_fd('\n', 1);
+	return (0);
+}
+*/

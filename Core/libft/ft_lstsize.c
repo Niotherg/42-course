@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 20:15:04 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/23 21:04:15 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,17 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (size);
 }
+
+/*
+int	main(void)
+{
+	t_list	*head;
+
+	head = ft_lstnew("one");
+	ft_lstadd_back(&head, ft_lstnew("two"));
+	ft_putnbr_fd(ft_lstsize(head), 1);
+	ft_putchar_fd('\n', 1);
+	ft_lstclear(&head, free);
+	return (0);
+}
+*/

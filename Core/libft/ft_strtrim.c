@@ -6,7 +6,7 @@
 /*   By: magulyas <magulyas@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 16:31:28 by magulyas          #+#    #+#             */
-/*   Updated: 2026/04/23 19:59:06 by magulyas         ###   ########.fr       */
+/*   Updated: 2026/05/13 11:13:58 by magulyas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (ft_substr(s1, start, end - start));
 }
+
+/*
+int	main(void)
+{
+	char	*result;
+
+	result = ft_strtrim("  libft  ", " ");
+	if (result)
+	{
+		ft_putstr_fd(result, 1);
+		ft_putchar_fd('\n', 1);
+		free(result);
+	}
+	return (0);
+}
+*/
